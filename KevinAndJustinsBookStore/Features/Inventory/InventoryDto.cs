@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace KevinAndJustinsBookStore.Features
 {
-    public class Inventory
+    public class InventoryDto
     {
-        public Book Book { get; set; } = new Book();
+        public int Id { get; set; }
+        public BookDto Book { get; set; }
         public string Movies { get; set; }
         public string Puzzels { get; set; }
         public string Toys { get; set; }

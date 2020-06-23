@@ -12,5 +12,6 @@ namespace KevinAndJustinsBookStore.Shared
         public string Category { get; set; }
         public int ISBN { get; set; }
         public int DewyDec { get; set; }
+        public int Count { get; set; }
     }
 }
