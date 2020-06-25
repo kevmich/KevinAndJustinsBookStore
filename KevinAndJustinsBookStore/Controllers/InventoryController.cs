@@ -10,8 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace KevinAndJustinsBookStore.Controllers
 {
-    [Route("api/inventory")]
     [ApiController]
+    [Route("api/inventory")]
     public class InventoryController : ControllerBase
     {
         private readonly DataContext dataContext;
@@ -46,7 +46,7 @@ namespace KevinAndJustinsBookStore.Controllers
             return dataContext.Set<Inventory>().Select(MapperMethod()).ToList();
         }
 
-        [HttpGet]
+        [HttpGet("{id}")]
         public ActionResult<InventoryDto> GetById(int id)
         {
             var data = dataContext.Set<Inventory>().Where(x => x.Id == id).Select(MapperMethod()).FirstOrDefault();
